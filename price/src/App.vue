@@ -8,13 +8,13 @@
   components: {},
   data () {
     return {
-      info: null
+      infos: null
     }
   },
   mounted () {
     axios
-      .get('https://blockchain.info/ticker')
-      .then(response => (this.info = response))
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.infos = response.data.bpi))
   }
 
 };
@@ -26,38 +26,25 @@
      <caption>Etherum</caption>
         <thead>
            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Actions</th>
+              <th>unité</th>
+              <th>prix</th>
+              <th>pays</th>
            </tr>
         </thead>
           <tbody>
-              <tr>
-                 <td>toto</td>
-                 <td>toto1</td>
-                 <td>toto2</td>
-                 <td>toto3</td>
+              <tr v-for="info in infos" :key=info.data> 
+
+                <td>{{info.symbol}}</td>
+                 <td>{{info.rate_float}}</td>
+                 <td>{{info.description}}</td>
                </tr>
-                <tr>
-                  <td>toto4</td>
-                  <td>toto5</td>
-                  <td>toto6</td>
-                  <td>toto7</td>
-               </tr>
-               <tr>
-                 <td>toto8</td>
-                 <td>toto9</td>
-                 <td>toto10</td>
-                 <td>toto11</td>
-                </tr>
             </tbody>
    </table>
 
    <div>
-  {{ info }}
+  {{infos}}
 </div>
-   
+
 </template>
 
 <style>
