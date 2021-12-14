@@ -32,8 +32,8 @@
            </tr>
         </thead>
           <tbody>
-              <tr v-for="info in infos" :key=info.data> 
-
+              <tr v-for="info in infos" :key="info.data"> 
+                
                 <td>{{info.symbol}}</td>
                  <td>{{info.rate_float}}</td>
                  <td>{{info.description}}</td>
