@@ -22,8 +22,8 @@
 </script>
 
 <template>
+  <h2><caption>Bitcoin</caption></h2> 
   <table class="table table-striped">
-     <caption>Bitcoin</caption> 
         <thead>
            <tr>
               <th>unité</th>
