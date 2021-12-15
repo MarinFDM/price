@@ -23,7 +23,7 @@
 
 <template>
   <table class="table table-striped">
-     <caption>Bitcion</caption>
+     <caption>Bitcoin</caption> 
         <thead>
            <tr>
               <th>unité</th>
