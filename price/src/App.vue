@@ -22,7 +22,7 @@
 </script>
 
 <template>
-  <h2><caption>Bitcoin</caption></h2> 
+  <h2>Bitcoin</h2> 
   <table class="table table-striped">
         <thead>
            <tr>
@@ -65,5 +65,10 @@ table
   text-align: center;
   color: black;
   margin-top: 60px;
+}
+
+h2
+{
+color:rgb(2, 133, 2);
 }
 </style>
