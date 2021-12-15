@@ -23,7 +23,7 @@
 
 <template>
   <table class="table table-striped">
-     <caption>Etherum</caption>
+     <caption>Bitcion</caption>
         <thead>
            <tr>
               <th>unité</th>
@@ -34,7 +34,7 @@
           <tbody>
               <tr v-for="info in infos" :key="info.data"> 
                 
-                <td>{{info.symbol}}</td>
+                <td>{{info.code}}</td>
                  <td>{{info.rate_float}}</td>
                  <td>{{info.description}}</td>
                </tr>
@@ -42,7 +42,7 @@
    </table>
 
    <div>
-  {{infos}}
+  <!-- {{infos}} -->
 </div>
 
 </template>
