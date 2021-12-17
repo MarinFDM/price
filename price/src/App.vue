@@ -33,6 +33,18 @@ export default {
               <router-link class="nav-link" to="/db">database</router-link>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#register">
+              <span data-feather="home"></span>
+              <router-link class="nav-link" to="/register">register</router-link>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#signin">
+              <span data-feather="home"></span>
+              <router-link class="nav-link" to="/signin">SignIn</router-link>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
