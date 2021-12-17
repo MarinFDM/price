@@ -13,12 +13,13 @@ export default {
 
 <template>
   <div class="container-fluid">
-    
-    <nav
+
+    <div class="row">
+      <nav
       id="sidebarMenu"
-      class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+      class="col-2 border-right bg-light"
     >
-      <div class="position-sticky pt-3">
+      <div class="position-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">
@@ -35,9 +36,17 @@ export default {
         </ul>
       </div>
     </nav>
-    <router-view />
+    <main class="col">
+        <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
+  <router-view />
+        </div>
+  </main>
+    </div>
+    
+    
+
   </div>
-</template>
+  </template>
 
 
 <style>
@@ -47,7 +56,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
-  margin-top: 60px;
 }
 
 h2 {
