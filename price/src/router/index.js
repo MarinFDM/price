@@ -1,24 +1,24 @@
-import {Vue} from 'vue'
-import {createRouter, createWebHistory}  from 'vue-router'
 
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../components/Home.vue'
+import Db from '../components/Db.vue'
 
 const routes = [
-    {
-        path:'/',
-        name:"Home",
-    }
-    ,
-    {
-        path:'db',
-        name:"Db",
-        component:()=>import('./components/Db.vue')
-    }
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/db',
+    name: 'db',
+    component: Db
+  }
 ]
-
+ 
 const router = createRouter({
-    history:createWebHistory(),
-    routes
+  history: createWebHistory(),
+  routes
 })
-
+ 
 export default router
